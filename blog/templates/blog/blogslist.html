@@ -88,38 +88,33 @@
   </header>
 
   <main role="main">
+    <div class="container">
+      <h1 class="text-center pt-3">Welcome to my blog!</h1>
+      <br />
+      <br />
+      <br />
+      <h2>Recent Blogs</h2>
+      <hr />
+      <div class="row mb-2">
+        {% for blog in blogs.all %}
+        <div class="col-md-6">
+          <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+            <div class="col p-4 d-flex flex-column position-static">
 
-    <section class="jumbotron text-center">
-      <div class="container">
-        <h1>Greetings, I am Aditya Sinha</h1>
-        <p class="lead text-muted">I have made a few projects as described below.</p>
-        <p>
-          <a href="mailto:adityasinha2001@gmail.com" class="btn btn-primary my-2">Send me an e-mail</a>
-        </p>
-      </div>
-    </section>
-
-    <div class="album py-5 bg-light">
-      <div class="container">
-
-        <div class="row">
-          {% for project in projects.all %}
-          <div class="col-md-4">
-
-            <div class="card mb-4 shadow-sm">
-              <img class="card-img-top" src="{{project.image.url}}" />
-              <div class="card-body">
-                <h5 class="card-title">{{project.title}}</h5>
-                <p class="card-text">{{project.summary}}</p>
-              </div>
+              <!--  <strong class="d-inline-block mb-2 text-primary">World</strong> -->
+              <h3 class="mb-0">{{blog.title}}</h3>
+              <div class="mb-1 text-muted">{{blog.date}}</div>
+              <p class="card-text mb-auto">{{blog.summary}}</p>
+              <a href="#" class="stretched-link">Continue reading</a>
+            </div>
+            <div class="col-auto d-none d-lg-block">
+              <img class="card-img-top" src="{{blog.image.url}}" />
             </div>
           </div>
-
-          {% endfor %}
         </div>
+        {% endfor %}
       </div>
     </div>
-
   </main>
 
   <footer class="text-muted">

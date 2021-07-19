@@ -1,4 +1,4 @@
-# Portfolio Project
+# Personal Portfolio Project
 
 This is a **Django-based** website, which uses **PostgreSQL** database technology. This is a personalised website which acts as my introduction. It contains all my projects. One can view my resume and can visit my different competitive programming handles. An individual can also visit my blogs section after clicking on the **Blog** Option in the navbar. HTML and Booststrap have been used for frontend..
 
